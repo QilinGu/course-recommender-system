@@ -1,0 +1,79 @@
+{% extends "template.html" %}
+{% block content %}
+
+    <div class="page-header">
+        <h1>Recommended courses based on each course</h1>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">Course 1: {{ ls_kurs[0] }} </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <td>Title</td>
+        <td>Description</td>
+        </thead>
+        {% for title, val, description in  first_course %}
+            <tr>
+                <td>{{ title }}</td>
+                <td>{{ description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Course 2: {{ ls_kurs[1] }} </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <td>Title</td>
+        <td>Description</td>
+        </thead>
+        {% for title, val, description in  second_course %}
+            <tr>
+                <td>{{ title }}</td>
+                <td>{{ description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Course 3: {{ ls_kurs[2] }} </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <td>Title</td>
+        <td>Description</td>
+        </thead>
+        {% for title, val, description in  third_course %}
+            <tr>
+                <td>{{ title }}</td>
+                <td>{{ description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+    <div class="panel panel-default">
+        <div class="panel-heading">Course 4: {{ ls_kurs[3] }} </div>
+    </div>
+
+    <table class="table">
+        <thead>
+        <td>Title</td>
+        <td>Description</td>
+        </thead>
+        {% for title, val, description in  fourth_course %}
+            <tr>
+                <td>{{ title }}</td>
+                <td>{{ description }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+
+
+{% endblock %}
